@@ -86,7 +86,7 @@ export default function DescriptiveAnalysis({ stats, correlationMatrix }) {
         <CorrelationHighlights strongestPositive={strongestPositive} strongestNegative={strongestNegative} />
 
         <div className="table-shell">
-          <div className="max-h-[32rem] overflow-auto">
+          <div className="table-scroll max-h-[32rem] overflow-auto">
             <table className="report-table min-w-full text-sm">
               <thead className="sticky top-0 text-left text-xs uppercase tracking-[0.2em]">
                 <tr>
