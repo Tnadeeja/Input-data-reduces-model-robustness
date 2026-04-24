@@ -1,0 +1,23 @@
+{
+  "tests": [
+    {
+      "experiment": "Gaussian Noise",
+      "anova_f_statistic": 2.346744,
+      "p_value": 0.12491,
+      "interpretation": "Not Significant"
+    },
+    {
+      "experiment": "Missing Data",
+      "anova_f_statistic": 0.501872,
+      "p_value": 0.691463,
+      "interpretation": "Not Significant"
+    },
+    {
+      "experiment": "Outliers",
+      "anova_f_statistic": 0.663905,
+      "p_value": 0.597215,
+      "interpretation": "Not Significant"
+    }
+  ],
+  "final_decision": "Fail to Reject H0"
+}

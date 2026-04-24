@@ -1,0 +1,410 @@
+{
+  "gaussian_noise": {
+    "description": "Adds Gaussian noise to standardized training features only and evaluates on the unchanged clean test set.",
+    "levels": [
+      "0%",
+      "10%",
+      "20%",
+      "30%",
+      "50%"
+    ],
+    "results": [
+      {
+        "noise_level": 0.0,
+        "noise_label": "0%",
+        "models": {
+          "Linear Regression": {
+            "rmse": 0.62452,
+            "mae": 0.50353,
+            "r2": 0.40318,
+            "degradation_pct": 0.0
+          },
+          "Random Forest Regressor": {
+            "rmse": 0.553787,
+            "mae": 0.423667,
+            "r2": 0.530716,
+            "degradation_pct": 0.0
+          },
+          "Support Vector Regressor": {
+            "rmse": 0.603411,
+            "mae": 0.455236,
+            "r2": 0.442843,
+            "degradation_pct": 0.0
+          }
+        }
+      },
+      {
+        "noise_level": 0.1,
+        "noise_label": "10%",
+        "models": {
+          "Linear Regression": {
+            "rmse": 0.624352,
+            "mae": 0.503874,
+            "r2": 0.403502,
+            "degradation_pct": -0.026901
+          },
+          "Random Forest Regressor": {
+            "rmse": 0.571519,
+            "mae": 0.453781,
+            "r2": 0.500182,
+            "degradation_pct": 3.201953
+          },
+          "Support Vector Regressor": {
+            "rmse": 0.592016,
+            "mae": 0.453141,
+            "r2": 0.463688,
+            "degradation_pct": -1.888431
+          }
+        }
+      },
+      {
+        "noise_level": 0.2,
+        "noise_label": "20%",
+        "models": {
+          "Linear Regression": {
+            "rmse": 0.624444,
+            "mae": 0.503698,
+            "r2": 0.403326,
+            "degradation_pct": -0.012169
+          },
+          "Random Forest Regressor": {
+            "rmse": 0.598011,
+            "mae": 0.471406,
+            "r2": 0.452771,
+            "degradation_pct": 7.985742
+          },
+          "Support Vector Regressor": {
+            "rmse": 0.624572,
+            "mae": 0.484871,
+            "r2": 0.403082,
+            "degradation_pct": 3.506897
+          }
+        }
+      },
+      {
+        "noise_level": 0.3,
+        "noise_label": "30%",
+        "models": {
+          "Linear Regression": {
+            "rmse": 0.629222,
+            "mae": 0.50763,
+            "r2": 0.39416,
+            "degradation_pct": 0.752898
+          },
+          "Random Forest Regressor": {
+            "rmse": 0.6094,
+            "mae": 0.484229,
+            "r2": 0.431729,
+            "degradation_pct": 10.042309
+          },
+          "Support Vector Regressor": {
+            "rmse": 0.624841,
+            "mae": 0.477513,
+            "r2": 0.402567,
+            "degradation_pct": 3.551477
+          }
+        }
+      },
+      {
+        "noise_level": 0.5,
+        "noise_label": "50%",
+        "models": {
+          "Linear Regression": {
+            "rmse": 0.634467,
+            "mae": 0.516866,
+            "r2": 0.384016,
+            "degradation_pct": 1.592743
+          },
+          "Random Forest Regressor": {
+            "rmse": 0.632247,
+            "mae": 0.501302,
+            "r2": 0.388319,
+            "degradation_pct": 14.167902
+          },
+          "Support Vector Regressor": {
+            "rmse": 0.66748,
+            "mae": 0.522009,
+            "r2": 0.318248,
+            "degradation_pct": 10.617804
+          }
+        }
+      }
+    ]
+  },
+  "missing_data": {
+    "description": "Randomly replaces training values with NaN, applies median imputation, then evaluates on the clean test set.",
+    "levels": [
+      "5%",
+      "10%",
+      "20%",
+      "30%"
+    ],
+    "results": [
+      {
+        "missing_level": 0.05,
+        "missing_label": "5%",
+        "models": {
+          "Linear Regression": {
+            "rmse": 0.62779,
+            "mae": 0.506089,
+            "r2": 0.396915
+          },
+          "Random Forest Regressor": {
+            "rmse": 0.560452,
+            "mae": 0.435844,
+            "r2": 0.519351
+          },
+          "Support Vector Regressor": {
+            "rmse": 0.612681,
+            "mae": 0.464944,
+            "r2": 0.425594
+          }
+        }
+      },
+      {
+        "missing_level": 0.1,
+        "missing_label": "10%",
+        "models": {
+          "Linear Regression": {
+            "rmse": 0.626306,
+            "mae": 0.505309,
+            "r2": 0.399762
+          },
+          "Random Forest Regressor": {
+            "rmse": 0.575796,
+            "mae": 0.448667,
+            "r2": 0.492674
+          },
+          "Support Vector Regressor": {
+            "rmse": 0.625354,
+            "mae": 0.473764,
+            "r2": 0.401585
+          }
+        }
+      },
+      {
+        "missing_level": 0.2,
+        "missing_label": "20%",
+        "models": {
+          "Linear Regression": {
+            "rmse": 0.623456,
+            "mae": 0.502198,
+            "r2": 0.405212
+          },
+          "Random Forest Regressor": {
+            "rmse": 0.58497,
+            "mae": 0.466771,
+            "r2": 0.476379
+          },
+          "Support Vector Regressor": {
+            "rmse": 0.634448,
+            "mae": 0.493264,
+            "r2": 0.384053
+          }
+        }
+      },
+      {
+        "missing_level": 0.3,
+        "missing_label": "30%",
+        "models": {
+          "Linear Regression": {
+            "rmse": 0.62785,
+            "mae": 0.505373,
+            "r2": 0.396799
+          },
+          "Random Forest Regressor": {
+            "rmse": 0.58972,
+            "mae": 0.464271,
+            "r2": 0.46784
+          },
+          "Support Vector Regressor": {
+            "rmse": 0.687453,
+            "mae": 0.535882,
+            "r2": 0.276837
+          }
+        }
+      }
+    ]
+  },
+  "outliers": {
+    "description": "Injects IQR-based extreme values into training features only and evaluates on the clean test set.",
+    "levels": [
+      "5%",
+      "10%",
+      "20%",
+      "40%"
+    ],
+    "results": [
+      {
+        "outlier_level": 0.05,
+        "outlier_label": "5%",
+        "models": {
+          "Linear Regression": {
+            "rmse": 0.667594,
+            "mae": 0.545587,
+            "r2": 0.318014
+          },
+          "Random Forest Regressor": {
+            "rmse": 0.568233,
+            "mae": 0.436167,
+            "r2": 0.505913
+          },
+          "Support Vector Regressor": {
+            "rmse": 0.609178,
+            "mae": 0.465291,
+            "r2": 0.432143
+          }
+        }
+      },
+      {
+        "outlier_level": 0.1,
+        "outlier_label": "10%",
+        "models": {
+          "Linear Regression": {
+            "rmse": 0.706683,
+            "mae": 0.582543,
+            "r2": 0.235812
+          },
+          "Random Forest Regressor": {
+            "rmse": 0.577834,
+            "mae": 0.450885,
+            "r2": 0.489076
+          },
+          "Support Vector Regressor": {
+            "rmse": 0.645465,
+            "mae": 0.495156,
+            "r2": 0.362478
+          }
+        }
+      },
+      {
+        "outlier_level": 0.2,
+        "outlier_label": "20%",
+        "models": {
+          "Linear Regression": {
+            "rmse": 0.735204,
+            "mae": 0.61267,
+            "r2": 0.172885
+          },
+          "Random Forest Regressor": {
+            "rmse": 0.598474,
+            "mae": 0.47651,
+            "r2": 0.451924
+          },
+          "Support Vector Regressor": {
+            "rmse": 0.634061,
+            "mae": 0.506343,
+            "r2": 0.384805
+          }
+        }
+      },
+      {
+        "outlier_level": 0.4,
+        "outlier_label": "40%",
+        "models": {
+          "Linear Regression": {
+            "rmse": 0.779321,
+            "mae": 0.656028,
+            "r2": 0.070642
+          },
+          "Random Forest Regressor": {
+            "rmse": 0.612032,
+            "mae": 0.491771,
+            "r2": 0.426809
+          },
+          "Support Vector Regressor": {
+            "rmse": 0.686342,
+            "mae": 0.535586,
+            "r2": 0.279171
+          }
+        }
+      }
+    ]
+  },
+  "chart_friendly": {
+    "rmse_by_noise_level": [
+      {
+        "noise_level": "0%",
+        "Linear Regression": 0.62452,
+        "Random Forest Regressor": 0.553787,
+        "Support Vector Regressor": 0.603411
+      },
+      {
+        "noise_level": "10%",
+        "Linear Regression": 0.624352,
+        "Random Forest Regressor": 0.571519,
+        "Support Vector Regressor": 0.592016
+      },
+      {
+        "noise_level": "20%",
+        "Linear Regression": 0.624444,
+        "Random Forest Regressor": 0.598011,
+        "Support Vector Regressor": 0.624572
+      },
+      {
+        "noise_level": "30%",
+        "Linear Regression": 0.629222,
+        "Random Forest Regressor": 0.6094,
+        "Support Vector Regressor": 0.624841
+      },
+      {
+        "noise_level": "50%",
+        "Linear Regression": 0.634467,
+        "Random Forest Regressor": 0.632247,
+        "Support Vector Regressor": 0.66748
+      }
+    ],
+    "model_comparison": [
+      {
+        "model": "Linear Regression",
+        "Gaussian Noise": 0.634467,
+        "Missing Data": 0.62785,
+        "Outliers": 0.779321
+      },
+      {
+        "model": "Random Forest Regressor",
+        "Gaussian Noise": 0.632247,
+        "Missing Data": 0.58972,
+        "Outliers": 0.612032
+      },
+      {
+        "model": "Support Vector Regressor",
+        "Gaussian Noise": 0.66748,
+        "Missing Data": 0.687453,
+        "Outliers": 0.686342
+      }
+    ],
+    "degradation_percentage": [
+      {
+        "noise_level": "0%",
+        "Linear Regression": 0.0,
+        "Random Forest Regressor": 0.0,
+        "Support Vector Regressor": 0.0
+      },
+      {
+        "noise_level": "10%",
+        "Linear Regression": -0.026901,
+        "Random Forest Regressor": 3.201953,
+        "Support Vector Regressor": -1.888431
+      },
+      {
+        "noise_level": "20%",
+        "Linear Regression": -0.012169,
+        "Random Forest Regressor": 7.985742,
+        "Support Vector Regressor": 3.506897
+      },
+      {
+        "noise_level": "30%",
+        "Linear Regression": 0.752898,
+        "Random Forest Regressor": 10.042309,
+        "Support Vector Regressor": 3.551477
+      },
+      {
+        "noise_level": "50%",
+        "Linear Regression": 1.592743,
+        "Random Forest Regressor": 14.167902,
+        "Support Vector Regressor": 10.617804
+      }
+    ]
+  }
+}

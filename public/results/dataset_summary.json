@@ -1,0 +1,21 @@
+{
+  "rows": 1599,
+  "input_features": 11,
+  "target_variable": "quality",
+  "quality_min": 3,
+  "quality_max": 8,
+  "missing_values_count": 0,
+  "feature_names": [
+    "fixed acidity",
+    "volatile acidity",
+    "citric acid",
+    "residual sugar",
+    "chlorides",
+    "free sulfur dioxide",
+    "total sulfur dioxide",
+    "density",
+    "pH",
+    "sulphates",
+    "alcohol"
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "table": [
+    {
+      "feature": "fixed acidity",
+      "mean": 8.319637,
+      "median": 7.9,
+      "std": 1.741096,
+      "min": 4.6,
+      "max": 15.9,
+      "skewness": 0.982751
+    },
+    {
+      "feature": "volatile acidity",
+      "mean": 0.527821,
+      "median": 0.52,
+      "std": 0.17906,
+      "min": 0.12,
+      "max": 1.58,
+      "skewness": 0.671593
+    },
+    {
+      "feature": "citric acid",
+      "mean": 0.270976,
+      "median": 0.26,
+      "std": 0.194801,
+      "min": 0.0,
+      "max": 1.0,
+      "skewness": 0.318337
+    },
+    {
+      "feature": "residual sugar",
+      "mean": 2.538806,
+      "median": 2.2,
+      "std": 1.409928,
+      "min": 0.9,
+      "max": 15.5,
+      "skewness": 4.540655
+    },
+    {
+      "feature": "chlorides",
+      "mean": 0.087467,
+      "median": 0.079,
+      "std": 0.047065,
+      "min": 0.012,
+      "max": 0.611,
+      "skewness": 5.680347
+    },
+    {
+      "feature": "free sulfur dioxide",
+      "mean": 15.874922,
+      "median": 14.0,
+      "std": 10.460157,
+      "min": 1.0,
+      "max": 72.0,
+      "skewness": 1.250567
+    },
+    {
+      "feature": "total sulfur dioxide",
+      "mean": 46.467792,
+      "median": 38.0,
+      "std": 32.895324,
+      "min": 6.0,
+      "max": 289.0,
+      "skewness": 1.515531
+    },
+    {
+      "feature": "density",
+      "mean": 0.996747,
+      "median": 0.99675,
+      "std": 0.001887,
+      "min": 0.99007,
+      "max": 1.00369,
+      "skewness": 0.071288
+    },
+    {
+      "feature": "pH",
+      "mean": 3.311113,
+      "median": 3.31,
+      "std": 0.154386,
+      "min": 2.74,
+      "max": 4.01,
+      "skewness": 0.193683
+    },
+    {
+      "feature": "sulphates",
+      "mean": 0.658149,
+      "median": 0.62,
+      "std": 0.169507,
+      "min": 0.33,
+      "max": 2.0,
+      "skewness": 2.428672
+    },
+    {
+      "feature": "alcohol",
+      "mean": 10.422983,
+      "median": 10.2,
+      "std": 1.065668,
+      "min": 8.4,
+      "max": 14.9,
+      "skewness": 0.860829
+    },
+    {
+      "feature": "quality",
+      "mean": 5.636023,
+      "median": 6.0,
+      "std": 0.807569,
+      "min": 3.0,
+      "max": 8.0,
+      "skewness": 0.217802
+    }
+  ],
+  "quality_distribution": [
+    {
+      "quality": 3,
+      "count": 10
+    },
+    {
+      "quality": 4,
+      "count": 53
+    },
+    {
+      "quality": 5,
+      "count": 681
+    },
+    {
+      "quality": 6,
+      "count": 638
+    },
+    {
+      "quality": 7,
+      "count": 199
+    },
+    {
+      "quality": 8,
+      "count": 18
+    }
+  ],
+  "alcohol_distribution": [
+    {
+      "bin_start": 8.4,
+      "bin_end": 9.05,
+      "count": 37
+    },
+    {
+      "bin_start": 9.05,
+      "bin_end": 9.7,
+      "count": 515
+    },
+    {
+      "bin_start": 9.7,
+      "bin_end": 10.35,
+      "count": 323
+    },
+    {
+      "bin_start": 10.35,
+      "bin_end": 11.0,
+      "count": 257
+    },
+    {
+      "bin_start": 11.0,
+      "bin_end": 11.65,
+      "count": 232
+    },
+    {
+      "bin_start": 11.65,
+      "bin_end": 12.3,
+      "count": 119
+    },
+    {
+      "bin_start": 12.3,
+      "bin_end": 12.95,
+      "count": 87
+    },
+    {
+      "bin_start": 12.95,
+      "bin_end": 13.6,
+      "count": 21
+    },
+    {
+      "bin_start": 13.6,
+      "bin_end": 14.25,
+      "count": 7
+    },
+    {
+      "bin_start": 14.25,
+      "bin_end": 14.9,
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "feature": "alcohol",
+  "target": "quality",
+  "description": "Correlation between alcohol and quality after progressively adding Gaussian noise to the alcohol feature.",
+  "points": [
+    {
+      "noise_level": "0%",
+      "correlation": 0.476166
+    },
+    {
+      "noise_level": "10%",
+      "correlation": 0.473728
+    },
+    {
+      "noise_level": "20%",
+      "correlation": 0.465373
+    },
+    {
+      "noise_level": "30%",
+      "correlation": 0.453759
+    },
+    {
+      "noise_level": "50%",
+      "correlation": 0.457278
+    }
+  ],
+  "clean_correlation": 0.476166,
+  "feature_index": 10
+}

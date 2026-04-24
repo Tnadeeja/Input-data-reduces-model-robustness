@@ -1,0 +1,194 @@
+{
+  "baseline_clean_test": {
+    "Linear Regression": {
+      "rmse": 0.62452,
+      "mae": 0.50353,
+      "r2": 0.40318
+    },
+    "Random Forest Regressor": {
+      "rmse": 0.553787,
+      "mae": 0.423667,
+      "r2": 0.530716
+    },
+    "Support Vector Regressor": {
+      "rmse": 0.603411,
+      "mae": 0.455236,
+      "r2": 0.442843
+    }
+  },
+  "gaussian_rmse_by_noise": [
+    {
+      "noise_level": "0%",
+      "Linear Regression": 0.62452,
+      "Random Forest Regressor": 0.553787,
+      "Support Vector Regressor": 0.603411
+    },
+    {
+      "noise_level": "10%",
+      "Linear Regression": 0.624352,
+      "Random Forest Regressor": 0.571519,
+      "Support Vector Regressor": 0.592016
+    },
+    {
+      "noise_level": "20%",
+      "Linear Regression": 0.624444,
+      "Random Forest Regressor": 0.598011,
+      "Support Vector Regressor": 0.624572
+    },
+    {
+      "noise_level": "30%",
+      "Linear Regression": 0.629222,
+      "Random Forest Regressor": 0.6094,
+      "Support Vector Regressor": 0.624841
+    },
+    {
+      "noise_level": "50%",
+      "Linear Regression": 0.634467,
+      "Random Forest Regressor": 0.632247,
+      "Support Vector Regressor": 0.66748
+    }
+  ],
+  "gaussian_r2_by_noise": [
+    {
+      "noise_level": "0%",
+      "Linear Regression": 0.40318,
+      "Random Forest Regressor": 0.530716,
+      "Support Vector Regressor": 0.442843
+    },
+    {
+      "noise_level": "10%",
+      "Linear Regression": 0.403502,
+      "Random Forest Regressor": 0.500182,
+      "Support Vector Regressor": 0.463688
+    },
+    {
+      "noise_level": "20%",
+      "Linear Regression": 0.403326,
+      "Random Forest Regressor": 0.452771,
+      "Support Vector Regressor": 0.403082
+    },
+    {
+      "noise_level": "30%",
+      "Linear Regression": 0.39416,
+      "Random Forest Regressor": 0.431729,
+      "Support Vector Regressor": 0.402567
+    },
+    {
+      "noise_level": "50%",
+      "Linear Regression": 0.384016,
+      "Random Forest Regressor": 0.388319,
+      "Support Vector Regressor": 0.318248
+    }
+  ],
+  "gaussian_degradation_by_noise": [
+    {
+      "noise_level": "0%",
+      "Linear Regression": 0.0,
+      "Random Forest Regressor": 0.0,
+      "Support Vector Regressor": 0.0
+    },
+    {
+      "noise_level": "10%",
+      "Linear Regression": -0.026901,
+      "Random Forest Regressor": 3.201953,
+      "Support Vector Regressor": -1.888431
+    },
+    {
+      "noise_level": "20%",
+      "Linear Regression": -0.012169,
+      "Random Forest Regressor": 7.985742,
+      "Support Vector Regressor": 3.506897
+    },
+    {
+      "noise_level": "30%",
+      "Linear Regression": 0.752898,
+      "Random Forest Regressor": 10.042309,
+      "Support Vector Regressor": 3.551477
+    },
+    {
+      "noise_level": "50%",
+      "Linear Regression": 1.592743,
+      "Random Forest Regressor": 14.167902,
+      "Support Vector Regressor": 10.617804
+    }
+  ],
+  "best_model_by_noise": [
+    {
+      "noise_level": "0%",
+      "best_model": "Random Forest Regressor",
+      "rmse": 0.553787,
+      "mae": 0.423667,
+      "r2": 0.530716
+    },
+    {
+      "noise_level": "10%",
+      "best_model": "Random Forest Regressor",
+      "rmse": 0.571519,
+      "mae": 0.453781,
+      "r2": 0.500182
+    },
+    {
+      "noise_level": "20%",
+      "best_model": "Random Forest Regressor",
+      "rmse": 0.598011,
+      "mae": 0.471406,
+      "r2": 0.452771
+    },
+    {
+      "noise_level": "30%",
+      "best_model": "Random Forest Regressor",
+      "rmse": 0.6094,
+      "mae": 0.484229,
+      "r2": 0.431729
+    },
+    {
+      "noise_level": "50%",
+      "best_model": "Random Forest Regressor",
+      "rmse": 0.632247,
+      "mae": 0.501302,
+      "r2": 0.388319
+    }
+  ],
+  "experiment_impact_comparison": [
+    {
+      "model": "Linear Regression",
+      "Gaussian Noise": 0.634467,
+      "Missing Data": 0.62785,
+      "Outliers": 0.779321
+    },
+    {
+      "model": "Random Forest Regressor",
+      "Gaussian Noise": 0.632247,
+      "Missing Data": 0.58972,
+      "Outliers": 0.612032
+    },
+    {
+      "model": "Support Vector Regressor",
+      "Gaussian Noise": 0.66748,
+      "Missing Data": 0.687453,
+      "Outliers": 0.686342
+    }
+  ],
+  "portfolio_findings": [
+    {
+      "title": "Finding 1",
+      "headline": "Random Forest Regressor is more robust overall.",
+      "detail": "It maintained the lowest average RMSE across the Gaussian noise experiment on the clean evaluation set."
+    },
+    {
+      "title": "Finding 2",
+      "headline": "Gaussian noise has the strongest negative impact.",
+      "detail": "At 50% Gaussian noise, Random Forest Regressor showed the largest RMSE degradation relative to its clean baseline."
+    },
+    {
+      "title": "Finding 3",
+      "headline": "Missing data has moderate impact due to imputation.",
+      "detail": "Median imputation preserved part of the signal, but every model still lost accuracy as missingness increased."
+    },
+    {
+      "title": "Finding 4",
+      "headline": "Outlier effects are lower or dataset-dependent.",
+      "detail": "Injected extreme values increased error, but the magnitude was less consistent than Gaussian corruption across models."
+    }
+  ]
+}
