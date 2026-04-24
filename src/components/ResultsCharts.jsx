@@ -14,11 +14,11 @@ import {
 } from "recharts";
 
 const palette = {
-  "Linear Regression": "#38bdf8",
-  "Random Forest Regressor": "#14b8a6",
+  "Linear Regression": "#3b82f6",
+  "Random Forest Regressor": "#10b981",
   "Support Vector Regressor": "#f59e0b",
-  "Gaussian Noise": "#38bdf8",
-  "Missing Data": "#14b8a6",
+  "Gaussian Noise": "#3b82f6",
+  "Missing Data": "#10b981",
   Outliers: "#f97316",
 };
 
@@ -31,7 +31,7 @@ export default function ResultsCharts({ noiseResults, modelResults }) {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
-      className="glass-card rounded-[2rem] p-8 text-slate-100"
+      className="report-section rounded-[2rem] p-8"
     >
       <p className="section-kicker">Model Performance Charts</p>
       <h2 className="mt-4 section-title">Performance decay across corruption types</h2>
@@ -40,7 +40,7 @@ export default function ResultsCharts({ noiseResults, modelResults }) {
         <ChartCard title="RMSE vs Gaussian Noise">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart data={modelResults.gaussian_rmse_by_noise}>
-              <CartesianGrid stroke="rgba(148,163,184,0.15)" vertical={false} />
+              <CartesianGrid stroke="rgba(148,163,184,0.2)" vertical={false} />
               <XAxis dataKey="noise_level" />
               <YAxis />
               <Tooltip />
@@ -54,10 +54,10 @@ export default function ResultsCharts({ noiseResults, modelResults }) {
           </ResponsiveContainer>
         </ChartCard>
 
-        <ChartCard title="R² vs Gaussian Noise">
+        <ChartCard title="R2 vs Gaussian Noise">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart data={modelResults.gaussian_r2_by_noise}>
-              <CartesianGrid stroke="rgba(148,163,184,0.15)" vertical={false} />
+              <CartesianGrid stroke="rgba(148,163,184,0.2)" vertical={false} />
               <XAxis dataKey="noise_level" />
               <YAxis />
               <Tooltip />
@@ -78,7 +78,7 @@ export default function ResultsCharts({ noiseResults, modelResults }) {
                 .filter(([key]) => key !== "noise_level")
                 .map(([model, value]) => ({ model, value }))}
             >
-              <CartesianGrid stroke="rgba(148,163,184,0.15)" vertical={false} />
+              <CartesianGrid stroke="rgba(148,163,184,0.2)" vertical={false} />
               <XAxis dataKey="model" hide />
               <YAxis />
               <Tooltip />
@@ -96,7 +96,7 @@ export default function ResultsCharts({ noiseResults, modelResults }) {
         <ChartCard title="Gaussian vs Missing vs Outlier Impact">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={noiseResults.chart_friendly.model_comparison}>
-              <CartesianGrid stroke="rgba(148,163,184,0.15)" vertical={false} />
+              <CartesianGrid stroke="rgba(148,163,184,0.2)" vertical={false} />
               <XAxis dataKey="model" hide />
               <YAxis />
               <Tooltip />
@@ -114,8 +114,8 @@ export default function ResultsCharts({ noiseResults, modelResults }) {
 
 function ChartCard({ title, children }) {
   return (
-    <div className="rounded-3xl border border-slate-800 bg-slate-950/55 p-5">
-      <h3 className="text-lg font-semibold text-white">{title}</h3>
+    <div className="report-card p-5">
+      <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
       <div className="mt-4 h-80">{children}</div>
     </div>
   );

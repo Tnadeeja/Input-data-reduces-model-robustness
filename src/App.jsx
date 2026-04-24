@@ -69,8 +69,8 @@ export default function App() {
   } = state.data;
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(34,211,238,0.14),_transparent_38%),linear-gradient(180deg,_#020617_0%,_#0f172a_38%,_#e2e8f0_100%)] text-slate-900">
-      <main className="mx-auto flex max-w-7xl flex-col gap-8 px-4 py-6 sm:px-6 lg:px-8">
+    <div className="min-h-screen text-slate-900">
+      <main className="mx-auto flex max-w-7xl flex-col gap-8 px-4 py-6 sm:px-6 lg:px-8 lg:py-8">
         <HeroSection />
         <DatasetOverview summary={datasetSummary} />
         <DescriptiveAnalysis stats={descriptiveStats} correlationMatrix={correlationMatrix} />
@@ -84,4 +84,3 @@ export default function App() {
     </div>
   );
 }
-
